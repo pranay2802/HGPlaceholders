@@ -52,6 +52,7 @@ extension CellPlaceholding {
         
         let actionColor = style.actionTitleColor
         actionButton?.setTitleColor(actionColor, for: .normal)
+        
         actionButton?.titleLabel?.font = style.actionTitleFont
         
         activityIndicator?.color = style.activityIndicatorColor
@@ -68,9 +69,7 @@ extension CellPlaceholding {
     /// - Parameter data: the data of the cell (texts, images, etc)
     internal func apply(data: PlaceholderData?) {
         actionButton?.setTitle(data?.action, for: .normal)
-        
         actionButton?.isHidden = true
-        
         titleLabel?.text = data?.title
         subtitleLabel?.text = data?.subtitle
         placeholderImageView?.image = data?.image
