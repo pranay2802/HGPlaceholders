@@ -195,11 +195,7 @@ open class TableView: UITableView {
         if let placeholderDataSource = theDataSource as? PlaceholderDataSourceDelegate {
             // placeholder configuration
             super.separatorStyle = .none
-            if placeholderDataSource == placeholdersProvider.noResultsDataSource() {
-                alwaysBounceVertical = true
-            }else {
-                alwaysBounceVertical = defaultAlwaysBounceVertical
-            }
+            alwaysBounceVertical = true
             let style = placeholderDataSource.placeholder.style
             if style?.shouldShowTableViewHeader != true { // style = nil or shouldShowTableViewHeader == false
                 tableHeaderView = nil
